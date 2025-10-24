@@ -56,17 +56,9 @@ pip install torch torchvision numpy pandas matplotlib scikit-learn
 
 2. **Inference**:
    ```python
-   import torch
-   from model import ConvolutionalNetwork
-
-   # Load model
-   model = ConvolutionalNetwork()
-   model.load_state_dict(torch.load('digits_cnn_model.pth'))
-   model.eval()
-
-   # Make predictions on new images
-   # ... (add inference code)
+   python inference.py
    ```
+   Provide the path to a 28x28 grayscale digit image, and the script will output the predicted digit (0-9).
 
 ## Training Details
 
@@ -79,6 +71,8 @@ pip install torch torchvision numpy pandas matplotlib scikit-learn
 ## Files
 
 - `Pipeline.ipynb`: Main notebook with data loading, model training, and evaluation
+- `train_cnn.py`: Standalone training script
+- `inference.py`: Script for making predictions on new digit images
 - `digits_cnn_model.pth`: Trained model weights
 - `cnn_data/`: MNIST dataset (downloaded automatically)
 - `requirements.txt`: Python dependencies
